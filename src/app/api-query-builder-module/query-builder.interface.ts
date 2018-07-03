@@ -26,7 +26,7 @@ export interface QueryBuilderServiceInterface {
 
     offset(value: number): QueryBuilderServiceInterface;
 
-    order(field: string, desc: boolean): QueryBuilderServiceInterface;
+    order(field: string, desc?: boolean): QueryBuilderServiceInterface;
 
     with(field: string): QueryBuilderServiceInterface;
 
