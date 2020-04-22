@@ -1,12 +1,12 @@
 {
   "name": "@kachit/angular-api-query-builder",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Angular API query filter builder",
   "license": "MIT",
   "homepage": "https://github.com/Kachit/angular-api-query-builder",
   "author": {
     "name": "Kachit",
-    "url": "http://anton-kornilov.ru",
+    "url": "https://anton-kornilov.ru",
     "github": "https://github.com/Kachit"
   },
   "keywords": [
