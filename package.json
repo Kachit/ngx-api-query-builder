@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test @kachit/angular-api-query-builder",
+    "test-lib": "ng test @kachit/angular-api-query-builder",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-lib": "ng build @kachit/angular-api-query-builder --prod",
