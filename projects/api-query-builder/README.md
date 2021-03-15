@@ -1,7 +1,7 @@
 # Angular API query builder module
 [![Npm badge](https://img.shields.io/npm/v/@kachit/angular-api-query-builder.svg)][npm]
 [![NPM downloads][npm-download]][npm]
-[![npm License](https://img.shields.io/npm/l/ng-packagr.svg?style=flat-square)](https://github.com/ng-packagr/ng-packagr/blob/master/LICENSE)
+[![npm License](https://img.shields.io/npm/l/ng-packagr.svg?style=flat-square)](https://github.com/kachit/angular-api-query-builder/blob/master/LICENSE)
 ![angular](https://img.shields.io/badge/angular-^9.0-lightgrey.svg?style=flat-square)  
 
 [npm]: https://www.npmjs.com/package/@kachit/angular-api-query-builder
