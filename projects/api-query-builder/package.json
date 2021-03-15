@@ -17,8 +17,8 @@
   ],
   "private": false,
   "peerDependencies": {
-    "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0"
+    "@angular/common": "^11.0.0",
+    "@angular/core": "^11.0.0"
   },
   "bugs": {
     "url": "https://github.com/Kachit/angular-api-query-builder/issues"
