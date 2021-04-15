@@ -25,6 +25,7 @@ jobs:
         run: |
           npm i
           npm run build-lib
+          npm run test-lib
       - name: Push Build to Releases
         run: npm run publish --access public
         env:
