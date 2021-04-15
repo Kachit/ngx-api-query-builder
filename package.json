@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test-lib": "ng test @kachit/angular-api-query-builder",
+    "test-lib": "ng test @kachit/angular-api-query-builder --browsers ChromeHeadless --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-lib": "ng build @kachit/angular-api-query-builder --prod",

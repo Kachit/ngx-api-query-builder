@@ -26,7 +26,6 @@ jobs:
           npm i
           npm run build-lib
       - name: Push Build to Releases
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "dist/api-query-builder/*"
-          token: ${{ secrets.NPM_AUTH_TOKEN }}
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

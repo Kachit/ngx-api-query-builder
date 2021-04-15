@@ -19,8 +19,7 @@ describe('QueryBuilderService', () => {
     service.eq('foo', 'bar').ne('bar', 'baz');
     let result = service.build();
     let params = new HttpParams();
-    params.set(QueryBuilderField.FILTER + '[foo][' + QueryBuilderOperator.EQ + ']', 'bar');
-    params.set(QueryBuilderField.FILTER + '[bar][' + QueryBuilderOperator.NE + ']', 'baz');
+    params = params.set(QueryBuilderField.FILTER + '[foo][' + QueryBuilderOperator.EQ + ']', 'bar').set(QueryBuilderField.FILTER + '[bar][' + QueryBuilderOperator.NE + ']', 'baz');
     expect(result.toString()).toEqual(params.toString());
   });
 });
