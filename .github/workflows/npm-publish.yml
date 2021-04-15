@@ -26,6 +26,6 @@ jobs:
           npm i
           npm run build-lib
       - name: Push Build to Releases
-        run: npm publish --access public
+        run: npm run publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
