@@ -1,4 +1,4 @@
-name: 'test'
+name: 'test-ngx'
 on:
   push:
   pull-request:
