@@ -16,5 +16,5 @@ jobs:
       - name: 'install'
         run: npm i
 
-      - name: 'test-lib'
-          run: npm run test-lib
+#      - name: 'test-lib'
+#          run: npm run test-lib
