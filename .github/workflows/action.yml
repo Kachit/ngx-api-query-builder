@@ -13,12 +13,12 @@ jobs:
           node-version: 14
 
       - name: 'install'
-        run: npm i
+        run: npm ci --ignore-scripts
 
       - name: 'test-lib'
         run: npm run test-lib
 
-  build:
+  publish:
     runs-on: ubuntu-latest
     needs: test
     steps:
@@ -26,17 +26,13 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: 'build-lib'
+      - name: 'install'
+        run: npm ci --ignore-scripts
+
+      - name: 'build'
         run: npm run build-lib
 
-#  publish:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#      - uses: actions/setup-node@v1
-#        with:
-#          node-version: 14
-#      - name: Publish
+#      - name: 'publish'
 #        run: |
 #          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
 #          npm run publish
