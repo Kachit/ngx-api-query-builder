@@ -32,9 +32,9 @@ jobs:
       - name: 'build'
         run: npm run build-lib
 
-#      - name: 'publish'
-#        run: |
-#          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-#          npm run publish
-#        env:
-#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: 'publish'
+        run: |
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm run publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
