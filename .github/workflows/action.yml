@@ -1,0 +1,43 @@
+name: 'deploy-ngx-lib'
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        name: 'setup node'
+        with:
+          node-version: 14
+
+      - name: 'install'
+        run: npm i
+
+      - name: 'test-lib'
+        run: npm run test-lib
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: 'build-lib'
+        run: npm run build-lib
+
+#  publish:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: actions/setup-node@v1
+#        with:
+#          node-version: 14
+#      - name: Publish
+#        run: |
+#          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+#          npm run publish
+#        env:
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
