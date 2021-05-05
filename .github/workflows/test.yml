@@ -1,7 +1,7 @@
 name: 'test-ngx'
 on:
-  push:
-  pull-request:
+  - push:
+  - pull-request:
 
 jobs:
   test-job:
