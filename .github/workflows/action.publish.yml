@@ -1,0 +1,29 @@
+name: 'CI publish'
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: 'install'
+        run: npm ci --ignore-scripts
+
+      - name: 'build'
+        run: npm run build-lib
+
+      - name: 'publish'
+        run: ${{ github.ref }}
+
+#      - name: 'publish'
+#        run: |
+#          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+#          npm run publish
+#        env:
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
