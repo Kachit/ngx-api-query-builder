@@ -2,6 +2,9 @@ name: 'CI test'
 on:
   push:
     branches:
+      - '*'
+    tags:
+      - '!*'
 
 jobs:
   test:

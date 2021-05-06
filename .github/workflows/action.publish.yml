@@ -2,7 +2,7 @@ name: 'CI publish'
 on:
   push:
     branches:
-      - "!*"
+      - '!*'
     tags:
       - '*'
 
@@ -20,8 +20,11 @@ jobs:
       - name: 'build'
         run: npm run build-lib
 
+      - id: get_version
+        uses: battila7/get-version-action@v2
+
       - name: 'publish'
-        run: echo ${{ github.event.release.tag_name }}
+        run: echo ${{ steps.get_version.outputs.version-without-v }}
 
 #      - name: 'publish'
 #        run: |
