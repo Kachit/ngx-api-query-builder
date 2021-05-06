@@ -1,6 +1,8 @@
 name: 'CI publish'
 on:
   push:
+    branches:
+      - "!*"
     tags:
       - '*'
 
@@ -19,7 +21,7 @@ jobs:
         run: npm run build-lib
 
       - name: 'publish'
-        run: ${{ github.ref }}
+        run: echo ${{ github.event.release.tag_name }}
 
 #      - name: 'publish'
 #        run: |
