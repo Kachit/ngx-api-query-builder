@@ -21,8 +21,9 @@ jobs:
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "github-action-${{ github.actor }}@users.noreply.github.com"
+          npm run build-lib
           npm run change-version ${{ github.ref_name }}
-          cd ../../ && npm run build-lib
+          cd ../../
 
       - name: 'publish'
         run: |
