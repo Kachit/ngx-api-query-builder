@@ -22,7 +22,8 @@ jobs:
 
       - name: 'publish'
         run: |
+          npm version ${{ github.ref_name }}
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-          npm run publish --access public --tag ${{ github.ref_name }}
+          npm run publish --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
