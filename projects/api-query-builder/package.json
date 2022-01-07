@@ -1,6 +1,6 @@
 {
   "name": "@kachit/ngx-api-query-builder",
-  "version": "1.3.0",
+  "version": "1.3.3",
   "description": "Angular API query filter builder",
   "license": "MIT",
   "homepage": "https://github.com/Kachit/ngx-api-query-builder",

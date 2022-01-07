@@ -20,13 +20,9 @@ jobs:
       - name: 'build'
         run: npm run build-lib
 
-      - id: get_version
-        uses: battila7/get-version-action@v2
-
       - name: 'publish'
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-          echo ${{ steps.get_version.outputs.version }}
-          echo ${{ github.ref_name }}
+          npm run publish --access public --tag ${{ github.ref_name }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
