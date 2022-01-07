@@ -18,13 +18,14 @@ jobs:
         run: npm ci --ignore-scripts
 
       - name: 'build'
-        run: npm run build-lib
-
-      - name: 'publish'
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "github-action-${{ github.actor }}@users.noreply.github.com"
-          npm version ${{ github.ref_name }}
+          npm run change-version ${{ github.ref_name }}
+          npm run build-lib
+
+      - name: 'publish'
+        run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
           npm run publish --access public
         env:

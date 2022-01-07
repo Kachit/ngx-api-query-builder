@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-lib": "ng build @kachit/ngx-api-query-builder --prod",
+    "change-version": "cd dist/api-query-builder/ && npm version",
     "publish": "cd dist/api-query-builder/ && npm publish"
   },
   "private": false,
