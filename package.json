@@ -1,6 +1,6 @@
 {
   "name": "ngx-api-query-builder-lib",
-  "version": "1.3.4",
+  "version": "1.3.7",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
