@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-api-query-builder-lib": {
+    "ngx-api-query-builder-lib": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist/angular-api-query-builder-lib",
+            "outputPath": "dist/ngx-api-query-builder-lib",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-api-query-builder-lib:build"
+            "browserTarget": "ngx-api-query-builder-lib:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-api-query-builder-lib:build:production"
+              "browserTarget": "ngx-api-query-builder-lib:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-api-query-builder-lib:build"
+            "browserTarget": "ngx-api-query-builder-lib:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "angular-api-query-builder-lib-e2e": {
+    "ngx-api-query-builder-lib-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -135,7 +135,7 @@
         }
       }
     },
-    "@kachit/angular-api-query-builder": {
+    "@kachit/ngx-api-query-builder": {
       "root": "projects/api-query-builder",
       "sourceRoot": "projects/api-query-builder/src",
       "projectType": "library",
@@ -177,5 +177,5 @@
       }
     }
   },
-  "defaultProject": "angular-api-query-builder-lib"
+  "defaultProject": "ngx-api-query-builder-lib"
 }

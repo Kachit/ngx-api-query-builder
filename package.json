@@ -1,14 +1,14 @@
 {
-  "name": "angular-api-query-builder-lib",
+  "name": "ngx-api-query-builder-lib",
   "version": "1.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test-lib": "ng test @kachit/angular-api-query-builder --browsers ChromeHeadless --watch=false",
+    "test-lib": "ng test @kachit/ngx-api-query-builder --browsers ChromeHeadless --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-lib": "ng build @kachit/angular-api-query-builder --prod",
+    "build-lib": "ng build @kachit/ngx-api-query-builder --prod",
     "publish": "cd dist/api-query-builder/ && npm publish"
   },
   "private": false,
