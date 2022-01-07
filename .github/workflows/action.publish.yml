@@ -22,7 +22,7 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "github-action-${{ github.actor }}@users.noreply.github.com"
           npm run change-version ${{ github.ref_name }}
-          npm run build-lib
+          cd ../../ && npm run build-lib
 
       - name: 'publish'
         run: |
