@@ -26,6 +26,7 @@ jobs:
       - name: 'publish'
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-          echo ${{ steps.get_version.outputs.version }} ${{ github.ref_name }}
+          echo ${{ steps.get_version.outputs.version }}
+          echo ${{ github.ref_name }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
