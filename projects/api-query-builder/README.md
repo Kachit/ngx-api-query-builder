@@ -15,7 +15,7 @@ npm i @kachit/ngx-api-query-builder
 
 ```js
 //your-service-class.ts
-import { QueryBuilderService } from '@kachit/angular-api-query-builder';
+import { QueryBuilderService } from '@kachit/ngx-api-query-builder';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
